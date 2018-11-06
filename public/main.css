@@ -1,0 +1,81 @@
+body {
+  background: url(bg.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'Conthrax';
+  src: url('conthrax-sb.ttf') format('truetype')
+}
+
+.logo {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  color: #8B8394;
+  background-color: transparent;
+  width: 350px;
+  padding: 15px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.2);
+  margin-top: 30px;
+}
+
+button:hover {
+  box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.4);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.constellation {
+  grid-column: span 3;
+  position: relative;
+}
+
+.constellation img {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.5;
+}
+
+.constellation a {
+  color: #4D435C;
+}
+
+.constellation a:hover {
+  color: #FFF;
+}
+
+.constellation a:hover img {
+  opacity: 1;
+}
+
+.constellation p {
+  position: absolute;
+  font-family: 'Conthrax', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  margin: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}

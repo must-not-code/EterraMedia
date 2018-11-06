@@ -1,10 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   background: url(bg.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  text-transform: uppercase;
+  color: #4B3559;
+  font-family: 'Oswald', sans-serif;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
 }
 
 @font-face {
@@ -30,6 +39,7 @@ button {
   padding: 15px;
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
+  text-transform: uppercase;
   box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.2);
   margin-top: 30px;
 }
@@ -49,11 +59,32 @@ button:hover {
 }
 
 .constellation img {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   opacity: 0.5;
+}
+
+.constellation h1 {
+  position: absolute;
+  font-family: 'Conthrax', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  margin: 0;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.constellation p {
+  position: relative;
+  top: 80%;
+  text-align: center;
+  padding: 0px 5%;
+  /* visibility: hidden; */
 }
 
 .constellation a {
@@ -68,14 +99,31 @@ button:hover {
   opacity: 1;
 }
 
-.constellation p {
-  position: absolute;
-  font-family: 'Conthrax', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 0.5rem;
-  margin: 0;
-  z-index: 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+.constellation a:hover + p {
+  visibility: visible;
+}
+
+@media (min-width: 992px) {
+  .outside img,
+  .outside h1 {
+    top: 30%;
+  }
+
+  .outside p {
+    top: 60%;
+  }
+}
+
+.footer {
+  background-color: red;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.footer,
+.push {
+  height: 50px;
 }

@@ -49,36 +49,35 @@ button:hover {
 
 .constellation {
   grid-column: span 3;
+}
+
+.constellation div {
   position: relative;
 }
 
 .constellation img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   opacity: 0.5;
+  display: block;
+  margin: auto;
 }
 
 .constellation h1 {
-  position: absolute;
   font-family: 'Conthrax', sans-serif;
   font-size: 2.5rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   margin: 0;
   z-index: 1;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
 .constellation p {
-  position: relative;
-  top: 80%;
   text-align: center;
   padding: 0px 5%;
-  /* visibility: hidden; */
+  visibility: hidden; */
 }
 
 .constellation a {
@@ -98,21 +97,35 @@ button:hover {
 }
 
 @media (min-width: 992px) {
-  .outside img,
-  .outside h1 {
-    top: 30%;
-  }
-
-  .outside p {
-    top: 60%;
+  .inside {
+    padding-top: 100px;
   }
 }
 
 .content {
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 100px);
 }
 
 .footer {
-  height: 50px;
-  background-color: red;
+  height: 100px;
+  color: #53415D;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.footer div {
+  margin-bottom: 30px;
+}
+
+.footer p {
+  font-size: 0.8rem;
+}
+
+.footer a {
+  color: #53415D;
+  margin: 15px;
+}
+
+.footer a:hover {
+  color: #FFF;
 }

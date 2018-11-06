@@ -17,7 +17,7 @@ body {
 .logo {
   max-width: 100%;
   display: block;
-  margin: auto;
+  margin: 50px auto 80px auto;
 }
 
 button {
@@ -28,7 +28,7 @@ button {
   border-radius: 30px;
   color: #8B8394;
   background-color: transparent;
-  width: 350px;
+  width: 300px;
   padding: 15px;
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;

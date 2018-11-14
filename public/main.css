@@ -27,18 +27,21 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 30px;
-  color: #8B8394;
-  background-color: transparent;
-  width: 300px;
-  padding: 15px;
+  width: 350px;
+  padding: 20px;
   font-family: 'Oswald', sans-serif;
   font-size: 0.9rem;
   text-transform: uppercase;
-  box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.2);
   margin-top: 30px;
 }
 
-button:hover {
+.btn {
+  color: #8B8394;
+  background-color: transparent;
+  box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
   box-shadow: 0px 0px 14px 6px rgba(255, 255, 255, 0.4);
 }
 
@@ -162,4 +165,106 @@ button:hover {
 
 .footer a:hover {
   color: #FFF;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 150%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background-color: #32273B;
+  opacity: 0.9;
+  color: #FFF;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 10px;
+  margin: 15% auto;
+  padding: 30px;
+  width: 400px;
+  max-width: 100%;
+}
+
+h3 {
+  font-weight: 400;
+  clear: both;
+  margin: 0;
+}
+
+.close {
+  position: relative;
+  right: -50%;
+  top: -10px;
+  color: #AAA;
+  font-size: 24px;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit {
+  background-image: -webkit-linear-gradient( 90deg, rgb(7,117,183) 0%, rgb(68,199,239) 100%);
+  color: #FFF;
+  width: 100%;
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 30px;
+  background-color: #A6A1A9;
+  border: none;
+  padding: 20px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  font-family: 'Oswald', sans-serif;
+}
+
+textarea {
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  text-transform: uppercase;
+  color: #000;
+}
+
+.hp {
+  display: none;
+}
+
+.error {
+  color: red;
+  text-transform: none;
+}
+
+*:focus {
+  outline: 0 !important;
 }

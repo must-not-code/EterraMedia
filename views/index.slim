@@ -5,13 +5,15 @@ html
     link href='apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'
     link href='favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'
     link href='favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'
-    link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+    link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css'
     link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald&amp;subset=cyrillic'
     link rel='stylesheet' href='main.css'
+    script src='https://code.jquery.com/jquery-3.3.1.min.js'
+    script src='main.js'
   body
     .content
       img.logo src='logo.png'
-      /button Связаться с нами
+      button#btn.btn Связаться с нами
       .container
         .constellation
           a href='http://etv-media.ru' target='blank'
@@ -40,8 +42,26 @@ html
     .footer
       div
         a href='https://www.facebook.com/E-Terra-Media-245446236137016' target='blank'
-          i.fa.fa-facebook-official.fa-2x
+          i.fab.fa-facebook-square.fa-2x
         a href='https://vk.com/eterra_media' target='blank'
-          i.fa.fa-vk.fa-2x
+          i.fab.fa-vk.fa-2x
       p
         = "© Eterra media #{Time.now.year}. Все права защищены"
+    #modal.modal
+      .modal-content
+        #close.close
+          i.far.fa-times-circle
+        .form#form
+          h3 Форма обратной связи
+          .error#error
+          form#contact action='/' method='post'
+            .field
+              input#name name='name' type='text' placeholder='Имя' required='true'
+            .field.hp
+              input#email name='email' type='email' placeholder='Почта'
+            .field
+              input#email name='real_email' type='email' placeholder='Почтовый адрес' required='true'
+            .field
+              textarea#text name='text' type='text' placeholder='Текст сообщения' rows='8' maxlength='10000' required='true'
+            .field
+              button.submit type='submit' Отправить
